@@ -1,4 +1,4 @@
-// "SPDX-License-Identifier: WTFPL"
+// SPDX-License-Identifier: WTFPL
 pragma solidity ^0.8.3;
 
 contract MaybeDoubler {
@@ -11,7 +11,7 @@ contract MaybeDoubler {
             sender.transfer(amount*2);
         }
         else {
-            require(msg.sender == address(0x0), "You are fucked LOL!");
+            // You are fucked LOL!
         }
     }
 }

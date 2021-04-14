@@ -1,0 +1,9 @@
+# Packages
+node_modules/
+
+# Hardhat build outputs
+artifacts/
+cache/
+
+# Secrets json file
+secrets.json

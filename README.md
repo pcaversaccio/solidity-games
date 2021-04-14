@@ -60,6 +60,11 @@ Bear in mind that the personal accounts of players (their respective winnings) a
 
 This is intended to prevent a Denial of Service attack, where a player could have all the roulette money in his winnings account, preventing other players to play. It's players responsability to be aware of this, and cash out frequently.
 
+## 3. Tricks
+*Logic:* Set a simple trick (e.g. Frontside Double Cork 1080) to be executed.
+
+- Deployed Rinkeby Contract Address: [0x77219CBFA7F9284154E8ab5C7c8912B3f5834c22](https://rinkeby.etherscan.io/address/0x77219cbfa7f9284154e8ab5c7c8912b3f5834c22)
+
 **Have fun!**
 
 ## References

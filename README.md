@@ -67,14 +67,15 @@ This is intended to prevent a Denial of Service attack, where a player could hav
 
 ## 4. Blackjack
 *Logic:* The contract follows the regular rules of [Blackjack](https://www.bicyclecards.com/how-to-play/blackjack/).
-- Player hits/stands to beat dealer's hand by getting as close to 21 as possible.
-- Reno Rule: Player can only double down on 9, 10, or 11.
+- Player hits/stands to beat dealer's hand by getting as close to 21 as possible
+- Reno rule: Player can only double down on 9, 10, or 11
 - Split under 21 rule
 
-**Split under 21 rule:** Modified split - If either of the player's hand in a split beats dealer, player wins bet on both hands automatically. But if Player busts on either deck, Dealer wins bet on both decks. On a split hand, If player's first hand has a standoff with dealer, player's other hand must beat dealer, otherwise dealer wins. If player's second hand stands off with dealer, player gets original bet back. On a split hand, the Player's split total is updated first, then when player stands, the Player's card total is updated. If either of these totals beats the dealer, player wins the split and receives the bet on both cards. Player can either double down or split, player cannot split then double down and vice versa.
+### Split under 21 rule
+Modified split - If either of the player's hand in a split beats dealer, player wins bet on both hands automatically. But if Player busts on either deck, Dealer wins bet on both decks. On a split hand, If player's first hand has a standoff with dealer, player's other hand must beat dealer, otherwise dealer wins. If player's second hand stands off with dealer, player gets original bet back. On a split hand, the Player's split total is updated first, then when player stands, the Player's card total is updated. If either of these totals beats the dealer, player wins the split and receives the bet on both cards. Player can either double down or split, player cannot split then double down and vice versa.
 
 - Deployed Rinkeby Contract Address: [0x0c7eec5d4E920414cfB1289Ea95CE92f5e82FE44](https://rinkeby.etherscan.io/address/0x0c7eec5d4e920414cfb1289ea95ce92f5e82fe44)
-> Due to the following error arising in the Solidity compiler versions `>0.8.0`: **CompilerError: Stack too deep when compiling inline assembly: Variable value0 is 1 slot(s) too deep inside the stack.**, I deployed the contract with the compiler version `0.7.6`. My best guess is that this error occurs due to the fact that I declare more than 16 variables and the EVM stack has a 16 limit of variables.
+> Due to the following error arising in the Solidity compiler versions `>0.8.0`: *CompilerError: Stack too deep when compiling inline assembly: Variable value0 is 1 slot(s) too deep inside the stack.*, I deployed the contract with the compiler version `0.7.6`. My best guess is that this error occurs due to the fact that I declare more than 16 variables and the EVM stack has a 16 limit of variables.
 
 **Have fun!**
 

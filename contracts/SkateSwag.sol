@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: WTFPL
-pragma solidity ^0.8.3;
+pragma solidity ^0.8.4;
 
 contract SkateSwag {
     
@@ -11,34 +11,39 @@ contract SkateSwag {
 
     uint normalPracticeTime = 20 minutes;
     uint practiceTimeWithBeer = 10 minutes;
-    uint32 newPracticePossiblity;
+    uint32 newPracticePossibility;
     
     function practice () external {
-        if(block.timestamp >= newPracticePossiblity) {
+        if(block.timestamp >= newPracticePossibility) {
             if(block.timestamp >= beerFreeTime) {
                 // dude is currently sober
                 level = level + 2;
-                newPracticePossiblity = uint32(block.timestamp + normalPracticeTime);
+                newPracticePossibility = uint32(block.timestamp + normalPracticeTime);
             }
             else {
                 // dude is drinking a beer currently
                 level = level + 1;
-                newPracticePossiblity = uint32(block.timestamp + practiceTimeWithBeer);
+                newPracticePossibility = uint32(block.timestamp + practiceTimeWithBeer);
             }
         }
     }
     
-    function currentLevel () external view returns(uint){
+    function currentLevel () external view returns(uint) {
         return level;
     }
 
     function isDrinkingBeer() external view returns(bool) {
-        if(block.timestamp >= beerFreeTime) {return false;} else {return true;}
+        if(block.timestamp >= beerFreeTime) {
+            return false;
+        }
+        else {
+            return true;
+        }
     }
 
-    function drinkBeer () external payable{
-        require(msg.value == beerPrice);
-        require(block.timestamp >= newPracticePossiblity);
+    function drinkBeer () external payable {
+        require(msg.value == beerPrice, "The amount of Ether sent does not equal to the price of beer.");
+        require(block.timestamp >= newPracticePossibility, "It's too early to practice again.");
         beerFreeTime = uint32(block.timestamp + beerDrinkingTime);
     }
 }

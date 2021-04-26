@@ -78,11 +78,12 @@ Modified split - If either of the player's hand in a split beats dealer, player 
 > Due to the following error arising in the Solidity compiler versions `>0.8.0`: *CompilerError: Stack too deep when compiling inline assembly: Variable value0 is 1 slot(s) too deep inside the stack.*, I deployed the contract with the compiler version `0.7.6`. My best guess is that this error occurs due to the fact that I declare more than 16 variables and the EVM stack has a 16 limit of variables.
 
 ## 5. Skate Swag
-Improve your skate swag by exercising regularly. Work your way up to become the greatest skate swager! But don't forget to chill out a bit. For example, by buying a beer you may recover faster and be able to up-swap more. Find it out! The game runs on the following Rinkeby address: tbd
+Improve your skate swag by exercising regularly. Work your way up to become the greatest skate swager! But don't forget to chill out a bit. For example, by buying a beer you may recover faster and be able to up-swap more. Find it out! 
 
-<img src="https://www.instagram.com/p/CNDCX1WnmTB/">
+- Deployed Rinkeby Contract Address: [0x0Cb24FEA6730Ad1Aa747857d1D9815F1f7D920de](https://rinkeby.etherscan.io/address/0x0cb24fea6730ad1aa747857d1d9815f1f7d920de)
+
+![](img/skate_swag.png)
 © https://www.henryjonesstudio.com/
-
 
 **Have fun!**
 
